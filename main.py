@@ -37,7 +37,7 @@ def order(mycookie,ekey,date,time):
     blob = get_blob(oraw, ekey[0:16], ekey[2:18])
     url='https://gym.byr.moe'
     r=requests.session()
-    result=r.post(url+'/newOrder.php',data={'blob':blob},verify=False,cookies=mycookie,proxies=bpproxy).text
+    result=r.post(url+'/newOrder.php',data={'blob':blob},verify=False,cookies=mycookie,timeout=1).text
     if result=='1':
         logger.info('预约成功!')
     elif result=='2':
@@ -70,5 +70,5 @@ if __name__ == "__main__":
         3. 20:40 - 21:40''')
     e_time=input()
     cookie={'PHPSESSID':sess}
-    intruder(1.8, cookie, ekey, e_date, e_time)
+    intruder(0.8, cookie, ekey, e_date, e_time)
 
