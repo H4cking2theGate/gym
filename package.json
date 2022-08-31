@@ -1,0 +1,17 @@
+{
+  "name": "gym",
+  "version": "1.0.0",
+  "description": "npm-insall-package",
+  "main": "enc.js",
+  "dependencies": {
+    "crypto-js": "^4.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true
+}
